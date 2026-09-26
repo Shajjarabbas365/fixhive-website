@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: theme("colors.navy.DEFAULT");
+  }
+  a {
+    color: theme("colors.slate.DEFAULT");
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.amber");
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+}
